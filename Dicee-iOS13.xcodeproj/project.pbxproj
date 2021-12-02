@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2689E4D62758FF57000148D5 /* RollingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689E4D52758FF57000148D5 /* RollingModel.swift */; };
 		ADAD913C22B0FDAE007B460A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADAD913B22B0FDAE007B460A /* README.md */; };
 		ADB0DFFD22AFA6090030352D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0DFFC22AFA6090030352D /* AppDelegate.swift */; };
 		ADB0E00122AFA6090030352D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0E00022AFA6090030352D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2689E4D52758FF57000148D5 /* RollingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingModel.swift; sourceTree = "<group>"; };
 		ADAD913B22B0FDAE007B460A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ADB0DFF922AFA6090030352D /* Dicee-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dicee-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB0DFFC22AFA6090030352D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2689E4D22758FEFB000148D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADB0E00222AFA6090030352D /* Main.storyboard */,
+				ADB0E00722AFA60E0030352D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2689E4D32758FF08000148D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADB0E00022AFA6090030352D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2689E4D42758FF3F000148D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2689E4D52758FF57000148D5 /* RollingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ADB0DFF022AFA6090030352D = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +86,12 @@
 		ADB0DFFB22AFA6090030352D /* Dicee-iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				2689E4D42758FF3F000148D5 /* Model */,
+				2689E4D22758FEFB000148D5 /* View */,
+				2689E4D32758FF08000148D5 /* Controller */,
 				ADB0DFFC22AFA6090030352D /* AppDelegate.swift */,
 				ADE1FB1322B39F0200DD2BD6 /* SceneDelegate.swift */,
-				ADB0E00022AFA6090030352D /* ViewController.swift */,
-				ADB0E00222AFA6090030352D /* Main.storyboard */,
 				ADB0E00522AFA60E0030352D /* Assets.xcassets */,
-				ADB0E00722AFA60E0030352D /* LaunchScreen.storyboard */,
 				ADB0E00A22AFA60E0030352D /* Info.plist */,
 			);
 			path = "Dicee-iOS13";
@@ -143,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB0E00122AFA6090030352D /* ViewController.swift in Sources */,
+				2689E4D62758FF57000148D5 /* RollingModel.swift in Sources */,
 				ADB0DFFD22AFA6090030352D /* AppDelegate.swift in Sources */,
 				ADE1FB1422B39F0200DD2BD6 /* SceneDelegate.swift in Sources */,
 			);

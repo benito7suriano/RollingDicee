@@ -15,33 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var rollButton: UIButton!
     
     let diceFaces = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
-    
-    var timer = Timer()
+    var roller: RollingModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         rollButton.layer.cornerRadius = 60 / 4
         
+        roller = RollingModel(d1: diceImageView1, d2: diceImageView2, faces: diceFaces)
+        
     }
 
-    @objc func stopRollingAnimation() {
-        diceImageView1.stopAnimating()
-        diceImageView2.stopAnimating()
-    }
-    
     @IBAction func rollButtonPressed(_ sender: Any) {
         
-        timer.invalidate()
-        
-        diceImageView1.animationImages = diceFaces.shuffled()
-        diceImageView2.animationImages = diceFaces.shuffled()
-        diceImageView1.animationDuration = 1.0
-        diceImageView2.animationDuration = 0.2
-        
-        diceImageView1.startAnimating()
-        diceImageView2.startAnimating()
-        
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector((stopRollingAnimation)), userInfo: nil, repeats: false)
+        roller?.roll()
         
         diceImageView1.image = diceFaces.randomElement()
         diceImageView2.image = diceFaces.randomElement()
